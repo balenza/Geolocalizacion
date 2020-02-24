@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>Geolocalizacion</title>
+
+    <style>
+
+            body
+                {
+                    background-color:#FFC;
+                }
+
+            #principal
+                {
+                    padding:10px 10px 10px 50px;
+                    background-color:#F93;	
+                    box-shadow: 10px 10px 5px 0px #999999;
+                    border-radius: 10px;
+                }
+
+            td
+                {
+                    padding-bottom:25px;
+                }
+            h1
+                {
+                    text-align:center;
+                }
+    </style>
+     
+</head>
+
+
+<body>
+    
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/autodetect.js">    </script>
+    <script src="js/maps.js" type="text/javascript"></script>  
+    
+<h1>GeoLocalización</h1>
+
+
+<div id="contenedor">
+    
+    
+<form id="form_datos" name="form_datos">
+      
+    
+  <table width=80% border=0 align="center" id="formulario">
+      
+    <tr>
+      <th colspan="2" align="center">Introduce coordenadas:</th>
+           
+    </tr>
+      
+    <tr>
+      <td align="right">Latitud: <input type="text" name="lat" id="lat" value="41.647200">
+      <td align="left">longitud: <input type="text" name="long" id="long" value="-0.885889">  
+    </tr>
+    
+    <tr>
+        <td align="right"><input type="button" value="Buscar" id="Buscar" onclick="myMap()">
+        <td align="left"><input type="button" value="Auto Detect" id="Detect" onclick="autoDetect()">           
+    </tr>
+    
+
+    <tr>
+        <th colspan="2" align="center">
+            <!-- Mapa Google -->
+            <div id="googleMap" style="width:90%;height:500px;margin: 0 auto;"></div>         
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKEhIPnXkDLi1WNIrSumKvwD8GRi2M9Yc&callback=myMap"></script>        
+        </th>
+    </tr>
+    
+    
+
+    <tr>
+        <td align="right"><input type="button" value="Cargar Favoritos" id="cargarFavoritos" onclick="pFavoritos()"></td>
+        <td align="left"><input type="text" name="distancia" id="dis" value="Distancia (metros)">
+    </tr>
+  
+    
+    
+   </table>
+  
+  
+  </form>
+
+    
+</div>
+
+
+</body>
+
+
+</html>
